@@ -1,0 +1,43 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %} Scrapper {% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container">
+        <h3><center>Search For Flights</center></h3>
+        {{ wtf.quick_form(form) }}
+    </div>
+        <div>
+        {% block content2 %}
+    <br>
+    <br>
+    <br>
+    <ul><b>Instructions</b>
+
+            <li>
+                Source : Airport code from where Journey will start.  Ex. For Ahmedabad put 'amd'
+            </li>
+            <li>
+                Destination : Airport code of destination city. Ex. For Mumbai put 'bom'
+            </li>
+            <li>
+                Adults : Number of Adults passengers
+            </li>
+            <li>
+                Children : Number of Non-Adult passengers
+            </li>
+            <li>
+                JSON or Classic Web Response : Results in different views
+            </li>
+        </ul>
+            {% endblock content2 %}
+        </div>
+        {% include "footer.html" %}
+    {% endblock content %}
+</body>
+</html>
