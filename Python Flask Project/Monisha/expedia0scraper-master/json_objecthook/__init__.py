@@ -1,1 +1,0 @@
-__AUTHOR__ = "Tony"
